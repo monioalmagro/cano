@@ -5,7 +5,7 @@ from productos import views as productos_views
 from django.conf import settings
 
 urlpatterns = [
-    path('home/', core_views.home, name='home'),
+    path('', core_views.home, name='home'),
     path('productos/', productos_views.productos, name='productos'),
     path('contact/', core_views.contact, name='contact'),
     path('admin/', admin.site.urls),
