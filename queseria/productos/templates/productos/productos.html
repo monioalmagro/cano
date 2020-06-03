@@ -1,1 +1,38 @@
-<h1>soy productos</h1>
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Productos{% endblock %}
+
+
+{% block content %}
+
+<div id=products class="container">
+  <h2>Productos</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Marca</th>
+        <th>producto</th>
+        <th>Peso</th>
+        <th>masdecuatrounidades</th>
+        <th>porHorma</th>
+        <th>fraccionado</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+        {% for lista in listas %}
+            <td> {{lista.marca}} </td>
+            <td> {{lista.producto}} </td>
+            <td> {{lista.peso}} </td>
+            <td> {{lista.masdecuatrounidades}} </td>
+            <td> {{lista.porHorma}} </td>
+            <td> {{lista.fraccionado}} </td>
+            <tr>
+        {% endfor %}
+  </tr>
+    </tbody>
+  </table>
+</div>
+{% endblock content %}
+
