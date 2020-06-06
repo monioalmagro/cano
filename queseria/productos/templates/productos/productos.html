@@ -6,16 +6,21 @@
 
 {% block content %}
 
+<br>
+<br>
+
+<br><br>
+
 <div id=products class="container">
-  <h2>Productos</h2>
+  <h2>Quesos</h2>
   <table class="table">
     <thead>
       <tr>
         <th>Marca</th>
         <th>producto</th>
         <th>Peso</th>
-        <th>masdecuatrounidades</th>
-        <th>porHorma</th>
+        <th>mas de cuatrounidades</th>
+        <th>por Horma</th>
         <th>fraccionado</th>
       </tr>
     </thead>
@@ -28,6 +33,34 @@
             <td> {{lista.masdecuatrounidades}} </td>
             <td> {{lista.porHorma}} </td>
             <td> {{lista.fraccionado}} </td>
+            <tr>
+        {% endfor %}
+  </tr>
+    </tbody>
+  </table>
+</div>
+<div id=products class="container">
+  <h2>Fiambres</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Marca</th>
+        <th>producto</th>
+        <th>Peso</th>
+        <th>por pieza</th>
+        <th>100 gr.</th>
+        <th>250 gr.</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+        {% for fiambre in fiambres%}
+            <td> {{fiambre.marca}} </td>
+            <td> {{fiambre.producto}} </td>
+            <td> {{fiambre.peso}} </td>
+            <td> {{fiambre.por_pieza}} </td>
+            <td> {{fiambre.cien_gramos}} </td>
+            <td> {{fiambre.cuarto_kilo}} </td>
             <tr>
         {% endfor %}
   </tr>

@@ -18,3 +18,22 @@ class Lista(models.Model):
 
     def __str__(self):
         return self.marca
+
+
+class Fiambre(models.Model):
+    marca = models.CharField(max_length=50, verbose_name= "Marca")
+    producto = models.CharField(max_length=50,verbose_name= "Producto")
+    peso = models.CharField(max_length=100)
+    por_pieza = models.DecimalField(max_digits=5, decimal_places=2)
+    cien_gramos = models.DecimalField(max_digits=5, decimal_places=2)
+    cuarto_kilo = models.DecimalField(max_digits=5, decimal_places=2)
+    created = models.DateTimeField(auto_now_add=True, verbose_name = "Fecha de creación")
+    updated = models.DateTimeField(auto_now=True, verbose_name = "Fecha de modificación")
+    
+
+    class Meta:
+        verbose_name ="fiambre"
+        verbose_name_plural ="fiambres"
+
+    def __str__(self):
+        return self.producto
