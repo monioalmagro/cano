@@ -58,11 +58,11 @@
         <ul>
           <li class="active"><a href="{% url 'home' %}">Home</a></li>
 
-          <li class="drop-down"><a href="{% url 'productos' %}">Productos</a>
-            <ul>
-              <li><a href="about.html">Quesos</a></li>
-              <li><a href="team.html">Fiambres</a></li>
-              <li><a href="testimonials.html">Almacen</a></li>
+          <li ><a href="{% url 'productos' %}">Productos</a>
+            {% comment %} <ul>
+              <li><a href="{% url 'productos' %}">Quesos</a></li>
+              <li><a href="{% url 'productos' %}">Fiambres</a></li>
+              <li><a href="{% url 'productos' %}">Almacen</a></li>
 
               {% comment %} <li class="drop-down"><a href="#">Deep Drop Down</a>
                 <ul>
@@ -72,8 +72,8 @@
                   <li><a href="#">Deep Drop Down 4</a></li>
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
-              </li> {% endcomment %}
-            </ul>
+              </li> 
+            </ul> {% endcomment %}
           </li>
 
          <!--  <li><a href="services.html">Services</a></li>
@@ -103,7 +103,7 @@
         <div class="carousel-item active" style="background-image: url({% static 'assets/img/slide/slide-1.jpg' %})">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Queseria <span>L. CANO</span></h2>
+              <h2 class="animate__animated animate__fadeInDown">Quesería <span>L. CANO</span></h2>
               <p class="animate__animated animate__fadeInUp">Especialidad en Quesos y Fiambres.</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">conozca más</a>
             </div>
@@ -114,7 +114,7 @@
         <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-2.jpg' %})">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Queseria</h2>
+              <h2 class="animate__animated animate__fadeInDown">Quesería</h2>
               <p class="animate__animated animate__fadeInUp">Especialidad en Quesos y Fiambres.</p>
               <a href="#products" class="btn-get-started animate__animated animate__fadeInUp scrollto">conozca más</a>
             </div>
@@ -125,7 +125,7 @@
         <div class="carousel-item" style="background-image: url({% static 'assets/img/slide/slide-3.jpg' %})">
           <div class="carousel-container">
             <div class="container">
-              <h2 class="animate__animated animate__fadeInDown">Queseria</h2>
+              <h2 class="animate__animated animate__fadeInDown">Quesería</h2>
               <p class="animate__animated animate__fadeInUp">Especialidad en Quesos y Fiambres.</p>
               <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">conozca más</a>
             </div>
@@ -147,135 +147,10 @@
     </div>
   </section><!-- End Hero -->
 
-  <main id="main">
 {% block content %}
 {% endblock content %}
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <h2>Queseria L. Cano</h2>
-            {% comment %} <h3>Nuestra propuesta conciste en ofrecer la mejor variedad, al mejor precio.</h3> {% endcomment %}
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p>
-              Nuestra propuesta conciste en ofrecer la mejor variedad, al mejor precio. Cuidando la calidad en nuestros procesos.
-              Y poder complementar la mesa familiar con nuestros productos. 
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i>Quesos: Encontrarás alternativas suaves o de sabor más intenso, más curados y complejos, tiernos o con mayor consistencia, saborizados con hierbas o especias. </li>
-              <li><i class="ri-check-double-line"></i>Fiambres: Jamón, Salames, Embutidos. Un deleite de la más alta calidad.Ideal para sándwiches, picadas y todo tipo de recetas clásicas y originales.</li>
-              <li><i class="ri-check-double-line"></i>Almacen: Ofrecemos productos de excelente relación calidad precio. </li>
-            </ul>
-            {% comment %} <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p> {% endcomment %}
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Clients Section ======= -->
-{% comment %}     <section id="clients" class="clients section-bg">
-      <div class="container">
-
-        <div class="row">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{% static 'assets/img/clients/client-1.png' %}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{% static 'assets/img/clients/client-2.png' %}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{% static 'assets/img/clients/client-3.png' %}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{% static 'assets/img/clients/client-4.png' %}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{% static 'assets/img/clients/client-5.png' %}" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="{% static 'assets/img/clients/client-6.png' %}" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section> {% endcomment %}
-    <!-- End Clients Section -->
-
-    <!-- ======= Services Section ======= -->
-{% comment %}     <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Service</h2>
-          <p>The Services We Offer</p>
-        </div>
-
-        <div class="row">
-          <div class="col-md-6">
-            <div class="icon-box">
-              <i class="icofont-computer"></i>
-              <h4><a href="#">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-chart-bar-graph"></i>
-              <h4><a href="#">Dolor Sitema</a></h4>
-              <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-image"></i>
-              <h4><a href="#">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-settings"></i>
-              <h4><a href="#">Nemo Enim</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-earth"></i>
-              <h4><a href="#">Magni Dolore</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-            </div>
-          </div>
-          <div class="col-md-6 mt-4 mt-md-0">
-            <div class="icon-box">
-              <i class="icofont-tasks-alt"></i>
-              <h4><a href="#">Eiusmod Tempor</a></h4>
-              <p>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section> {% endcomment %}
-    <!-- End Services Section -->
 
 
-
-  </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
